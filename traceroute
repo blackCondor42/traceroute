@@ -28,7 +28,13 @@ if(os.getuid() != 0):
 	print "Access denied"
 	exit()
 
-if(len(sys.argv) != 2)
-	print "Usage : traceroute <target>"
+if(len(sys.argv) != 3):
+	print "Usage : traceroute <type> <target>"
 	exit()
-udp(sys.argv[1])
+
+if(sys.argv[1] == "udp"):
+	udp(sys.argv[2])
+else:
+	print "------------------ Type List ------------------"
+	print "   udp "
+	print "-----------------------------------------------"
